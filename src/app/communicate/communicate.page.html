@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    	<ion-title>Chat</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content #content>
+  <div *ngIf="showMessages">
+    <div class="msg" *ngFor="let message of messages">
+      <div [ngClass]="{'bubble':true, 'alt': username !== message.username}">
+        <div class="txt">
+          <span [ngClass]="{'name':true, 'alt': username !== message.username}">{{message.username}}</span>
+          <span class="timestamp"></span>      
+          <span class="message">
+            {{message.message}}
+          </span> 
+        </div>
+        <div [ngClass]="{'bubble-arrow':true, 'alt': username !== message.username}"></div>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer>
+	<ion-toolbar>
+    	<ion-textarea rows="1" [(ngModel)]="message" placeholder="Type a message"></ion-textarea>
+	    <ion-buttons slot="primary">
+      		<ion-button class="circle-button" shape="round" fill="solid" (click)="sendMessage()"  (keydown.enter)="sendMessage()" color="secondary">
+	        	<ion-icon slot="icon-only" name="send"></ion-icon>
+	     	</ion-button>
+	    </ion-buttons>
+  	</ion-toolbar>
+</ion-footer>
