@@ -1,0 +1,29 @@
+<ion-content color="primary">
+   
+  <div class="container">
+    <ion-buttons class="center">
+      <div class="circle-border">
+        <ion-icon  slot="icon-only" name="chatboxes" style="font-size: 1000%"></ion-icon>
+      </div>
+    </ion-buttons>
+    <br/>
+
+    <ion-toolbar style="border-bottom-style: none" class="border">
+      <ion-input [(ngModel)]="username" placeholder="Username"></ion-input>
+      <ion-buttons slot="primary">
+        <ion-icon slot="icon-only" name="person"></ion-icon>
+      </ion-buttons>
+    </ion-toolbar>    
+
+    <ion-toolbar style="border-bottom-style: none" class="border">
+      <ion-input [(ngModel)]="password" type="password" placeholder="Password"></ion-input>
+      <ion-buttons slot="primary">
+        <ion-icon slot="icon-only" name="lock"></ion-icon>
+      </ion-buttons>
+    </ion-toolbar>    
+
+    <ion-toolbar class="border">
+      <ion-button (click)="onSumbit(event)" color="secondary" expand="full">Login</ion-button>
+    </ion-toolbar>
+  </div>
+</ion-content>

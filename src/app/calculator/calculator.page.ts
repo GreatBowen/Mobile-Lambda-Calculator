@@ -38,9 +38,9 @@ export class CalculatorPage {
 	}
 
 	async showHelpModal(event) {
-    const modal = await this.modalController.create({
-      component: HelpModalPage
-    });
-    return await modal.present();
-  }
+	    const modal = await this.modalController.create({
+	      component: HelpModalPage
+	    });
+	    return await modal.present();
+  	}
 }
