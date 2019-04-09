@@ -1,4 +1,4 @@
-.circle-button {
+/*.circle-button {
   height: 40px;
   width: 60px;
   border: 1px solid #424242;
@@ -35,4 +35,12 @@
 
 .bg-style {
   --ion-background-color: #F2F2F3;
+}*/
+
+.container {
+ padding: 20px;
+}
+
+.circle-button {
+  border-radius: 50%;
 }

@@ -4,7 +4,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content #content>
   <div *ngIf="showMessages">
     <div class="msg" *ngFor="let message of messages">
       <div [ngClass]="{'bubble':true, 'alt': username !== message.username}">
@@ -25,7 +25,7 @@
 	<ion-toolbar>
     	<ion-textarea rows="1" [(ngModel)]="message" placeholder="Type a message"></ion-textarea>
 	    <ion-buttons slot="primary">
-      		<ion-button class="circle-button" shape="round" fill="solid" (click)="sendMessage()"  (keydown.enter)="sendMessage()"color="secondary">
+      		<ion-button class="circle-button" shape="round" fill="solid" (click)="sendMessage()"  (keydown.enter)="sendMessage()" color="secondary">
 	        	<ion-icon slot="icon-only" name="send"></ion-icon>
 	     	</ion-button>
 	    </ion-buttons>

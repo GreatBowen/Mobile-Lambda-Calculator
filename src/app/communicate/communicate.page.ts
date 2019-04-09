@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { AngularFireDatabase   } from "@angular/fire/database"; 
 import { ModalController, NavParams, ToastController } from '@ionic/angular'
 import { LoginModalPage } from '../login-modal/login-modal.page';
@@ -9,6 +9,7 @@ import { LoginModalPage } from '../login-modal/login-modal.page';
   styleUrls: ['communicate.page.scss']
 })
 export class CommunicatePage {
+  @ViewChild('content') private content: any;
 	username: string='';
  	message:string='';
 	messages: object[] =[];
@@ -23,9 +24,10 @@ export class CommunicatePage {
 		this.db.list('chat').valueChanges().subscribe(data => {
 			this.messages = data;
 		});  	  
+
   }
 
-  	async toastMsg(msg: string) {
+  async toastMsg(msg: string) {
 		const toast = await this.toastController.create({
 			message: msg,
 			duration: 2000
@@ -34,19 +36,19 @@ export class CommunicatePage {
 	} 
 
 	async showLoginModal() {
-	    const modal = await this.modalController.create({
-	      component: LoginModalPage
-	    });
+    const modal = await this.modalController.create({
+      component: LoginModalPage
+    });
 
-	    modal.onDidDismiss().then((data) => {
-        this.showMessages = true;
-	    	this.username = data['data'];
-	    	console.log(data['data']);
-	    })
-	    return await modal.present();
-  	}
+    modal.onDidDismiss().then((data) => {
+      this.showMessages = true;
+    	this.username = data['data'];
+    	console.log(data['data']);
+    })
+    return await modal.present();
+  }
 
-  	 sendMessage() {
+  sendMessage() {
       if (this.message === '') {
         return;
       }
@@ -55,7 +57,7 @@ export class CommunicatePage {
       		username : this.username,
       		message: this.message 
     	}).then( () => {
-      		// message is sent
+
     	}).catch( () => {
 			  this.toastMsg('An error has occured while sending the message');
     	});

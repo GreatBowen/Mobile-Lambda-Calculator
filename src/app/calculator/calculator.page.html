@@ -6,7 +6,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="bg-style">
+<!-- <ion-content class="bg-style">
    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
       <ion-fab-button (click)="showHelpModal(event)">
         <ion-icon name="help"></ion-icon>
@@ -49,4 +49,18 @@
       </ion-card-content>  
     </ion-card>
 
+</ion-content>
+ -->
+
+<ion-content class="container">
+  <ion-card-title>
+  </ion-card-title>
+  <ion-toolbar style="border: 1px solid black">
+    <ion-input [(ngModel)]="equation" placeholder="λ calculus equation Here"></ion-input>
+    <ion-buttons slot="primary">
+      <ion-button (click)="onEvalLambdaEquation($event)" shape="round" fill="solid" color="secondary" class="circle-button">
+        <ion-icon slot="icon-only" name="calculator"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-content>
