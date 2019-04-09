@@ -1,0 +1,91 @@
+
+
+
+<div id="reduction"><table id="answer2"><tbody><tr><td colspan="2">(λ<var>x</var>.<var>x</var>) 4</td></tr><tr><td>⇒</td><td>4</td></tr></tbody></table></div>
+
+<form id="reduceForm" name="calculator" >
+ 
+<div id="calculator">
+        <input name ="answer"  class="calculator-screen"  id="test" value="(\x.x) 4 " >
+        <textarea type="text" id="txtScreen" > </textarea>   
+    <div class="numericPad">
+        <div class="rowsNumPad">
+                <input type="button"  class="btnNum" value=" 1 " onclick="calculator.answer.value += '1'" />
+                <input type="button"  class="btnNum" value=" 2 " onclick="calculator.answer.value += '2'" />
+                <input type="button"  class="btnNum" value=" 3 " onclick="calculator.answer.value += '3'" />
+                <input type="button"  class="btnNum" value=" C " onclick="calculator.answer.value = ''" />
+                
+
+        </div>
+            
+        <div class="rowsNumPad">
+                <input type="button"  class="btnNum" value=" 4 " onclick="calculator.answer.value += '4'" />
+                <input type="button"  class="btnNum" value=" 5 " onclick="calculator.answer.value += '5'" />
+                <input type="button"  class="btnNum" value=" 6 " onclick="calculator.answer.value += '6'" />
+                <input type="button"  class="btnNum" value=" ) " onclick="calculator.answer.value += ')'" />
+            
+        </div>
+
+        <div class="rowsNumPad">
+                <input type="button"  class="btnNum" value=" 7 " onclick="calculator.answer.value += '7'" />
+                <input type="button"  class="btnNum" value=" 8 " onclick="calculator.answer.value += '8'" />
+                <input type="button"  class="btnNum" value=" 9 " onclick="calculator.answer.value += '9'" />
+                <input type="button"  class="btnNum" value=" ( " onclick="calculator.answer.value += '('" />
+                
+        </div>
+
+        <div class="rowsNumPad">
+               
+                <input type="button"  class="btnNum" value=" 0 " onclick="calculator.answer.value += '0'" />
+                <input type="button"  class="btnNum" value=" . " onclick="calculator.answer.value += '.'" />
+                <button class="imgbutton" type="submit" onclick="setTimeout(showTableData, 500)" >=</button>
+                <input type="button"  style="font-size : 10px;" class="btnNum" value="Space" onclick="calculator.answer.value += ' '" />
+
+
+        </div>
+
+        <div class="rowsNumPad">
+            
+                <input type="button"  class="btnNum" value=" \x " onclick="calculator.answer.value += '\\x '" />
+                <input type="button"  class="btnNum" value=" \y " onclick="calculator.answer.value += '\\y '" />
+                <input type="button"  class="btnNum" value=" x " onclick="calculator.answer.value += 'x'" />
+                <input type="button"  class="btnNum" value=" y " onclick="calculator.answer.value += 'y'" />
+
+        </div>
+        <div class="rowsNumPad">
+
+        </div>
+    </div>
+
+    <div class="funtionPad">
+            <div class="rowsFuntionPad">
+                <input type="button" value="DEL" class="btnFuntionPad" onclick="clearEverything()" />
+            </div>
+            <div class="rowsFuntionPad">
+
+            <div class="rowsFuntionPad">
+                    <input type="button"  class="btnFuntionPad" value=" - " onclick="calculator.answer.value += '-'" />
+            </div>
+            <div class="rowsFuntionPad">
+                    <input type="button"  class="btnFuntionPad" value=" + " onclick="calculator.answer.value += '+'" />
+            </div>
+                <input type="button"  class="btnFuntionPad" value=" / " onclick="calculator.answer.value += '/'" />
+            </div>
+            <div class="rowsFuntionPad">
+                <input type="button"  class="btnFuntionPad" value=" * " onclick="calculator.answer.value += '*'" />
+            </div>
+        </div>
+
+
+
+        </div>
+
+    </div>
+</div>
+</form>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="jscss/lambda-min.js"></script>
+<link rel="stylesheet" href="jscss/keypad.css">
+<script src="jscss/jquery.js"></script>
+
+</body></html>

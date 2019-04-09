@@ -1,0 +1,88 @@
+html { overflow-y: hidden; overflow-x: hidden; }
+
+#calculator {
+	width: auto;
+	height: 420px;
+	margin: 0 auto;
+	margin-top: 5px;
+}
+
+#txtScreen {
+	float: left;
+	width: 322px;
+	height: 224px;
+	font-size: xx-large;
+	text-align: left;
+	white-space: pre;
+	outline: 5px solid lightblue;
+	border-top: 10px solid lightblue;
+}
+
+.numericPad {
+	position: relative;
+	float: left;
+	background-color: #4E4E4E;
+}
+
+.btnNum, .imgbutton{
+	width: 65px;
+	height: 55px;
+	color: #ffffff;
+	background-color: #4E4E4E;
+	font-size: large;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.btnNum:hover {
+	background-color: #464545;
+}
+
+.funtionPad {
+	position: relative;
+	float: left;
+	background-color: #B9B9B9;
+}
+
+.btnFuntionPad {
+	width: 55px;
+	height: 55px;
+	color: #ffffff;
+	background-color: #B9B9B9;
+	font-size: large;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.btnFuntionPad:hover {
+	background-color: #ACABAB;
+}
+
+.extraFuntionPad {
+	width: 15.6px;
+	height: 308px;
+	background-color: #1BE1B0;
+	position: relative;
+	float: right;
+}
+
+.calculator-screen {
+	width: 98%;
+	font-size: 1rem;
+	height: 40px;
+	border: none;
+	background-color: #252525;
+	color: #fff;
+	text-align: right;
+	padding-right: 20px;
+	padding-left: 10px;
+  }
+
+footer {
+	text-align: center;
+	margin-top: 50px;
+}
+
+footer span {
+	color: red;
+}
